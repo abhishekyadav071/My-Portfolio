@@ -93,18 +93,77 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Clickable Card Handler (opens project links on card click)
+    // 5. Interactive Live Project Modal Controller
+    const modalOverlay = document.getElementById('project-modal');
+    const modalClose = document.getElementById('modal-close');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-desc');
+    const modalTags = document.getElementById('modal-tags');
+    const modalIframe = document.getElementById('modal-iframe');
+    const previewUrlText = document.getElementById('preview-url-text');
+    const modalLiveBtn = document.getElementById('modal-live-btn');
+    const modalRepoBtn = document.getElementById('modal-repo-btn');
+
+    const openProjectModal = (card) => {
+        const title = card.getAttribute('data-title') || card.querySelector('.project-title')?.innerText || 'Project Showcase';
+        const desc = card.getAttribute('data-desc') || card.querySelector('.project-desc')?.innerText || '';
+        const tagsStr = card.getAttribute('data-tags') || '';
+        const tags = tagsStr.split(',').map(t => t.trim()).filter(Boolean);
+        const liveUrl = card.getAttribute('data-live') || card.getAttribute('data-url') || 'https://abhishekyadav071.github.io/My-Portfolio/';
+        const repoUrl = card.getAttribute('data-repo') || 'https://github.com/abhishekyadav071/My-Portfolio';
+
+        if (modalTitle) modalTitle.innerText = title;
+        if (modalDesc) modalDesc.innerText = desc;
+        if (previewUrlText) previewUrlText.innerText = liveUrl;
+
+        if (modalTags) {
+            modalTags.innerHTML = tags.map(t => `<span class="tag">${t}</span>`).join('');
+        }
+
+        if (modalLiveBtn) modalLiveBtn.href = liveUrl;
+        if (modalRepoBtn) modalRepoBtn.href = repoUrl;
+
+        if (modalIframe) {
+            modalIframe.src = liveUrl;
+        }
+
+        if (modalOverlay) {
+            modalOverlay.classList.add('active');
+        }
+    };
+
+    const closeProjectModal = () => {
+        if (modalOverlay) {
+            modalOverlay.classList.remove('active');
+        }
+        if (modalIframe) {
+            modalIframe.src = 'about:blank';
+        }
+    };
+
+    if (modalClose) {
+        modalClose.addEventListener('click', closeProjectModal);
+    }
+
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeProjectModal();
+            }
+        });
+    }
+
+    // Attach click listeners to all clickable cards
     const clickableCards = document.querySelectorAll('.clickable-card');
     clickableCards.forEach(card => {
         card.addEventListener('click', (e) => {
-            // Avoid duplicate triggers if user clicked directly on an anchor or button inside the card
-            if (e.target.closest('a') || e.target.closest('button')) {
+            if (e.target.closest('.open-live-btn')) {
+                const targetUrl = e.target.closest('a').href;
+                window.open(targetUrl, '_blank');
                 return;
             }
-            const url = card.getAttribute('data-url');
-            if (url) {
-                window.open(url, '_blank', 'noopener,noreferrer');
-            }
+
+            openProjectModal(card);
         });
     });
 });
