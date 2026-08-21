@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="code-card-glass">
+                    <div class="code-card-glass clickable-card" data-url="https://github.com/abhishekyadav071/My-Portfolio" title="Click to view repository on GitHub">
                         <div class="code-header">
                             <div class="code-dots">
                                 <span class="dot red"></span>
@@ -90,6 +90,7 @@
                                 <span class="dot green"></span>
                             </div>
                             <span class="code-title">deployment-config.js</span>
+                            <span class="click-hint"><i class="fas fa-external-link-alt"></i> Open Repo</span>
                         </div>
                         <div class="code-body">
 <pre><code><span class="keyword">const</span> <span class="variable">deployment</span> = {
@@ -118,17 +119,17 @@
                     <p class="section-subtitle">Passionate about clean architecture, modern aesthetics, and seamless user experiences.</p>
                 </div>
                 <div class="about-grid">
-                    <div class="about-card glass-card">
+                    <div class="about-card glass-card clickable-card" data-url="https://github.com/abhishekyadav071/My-Portfolio" title="Click to open repository">
                         <div class="card-icon"><i class="fas fa-bolt"></i></div>
                         <h3>Fast & Continuous Deployment</h3>
                         <p>Integrated with GitHub CI/CD pipelines and Vercel cloud infrastructure for instant global edge delivery.</p>
                     </div>
-                    <div class="about-card glass-card">
+                    <div class="about-card glass-card clickable-card" data-url="https://abhishekyadav071.github.io/My-Portfolio/" title="Click to view live site">
                         <div class="card-icon"><i class="fas fa-palette"></i></div>
                         <h3>Modern Glassmorphism Design</h3>
                         <p>Crafted with modern CSS custom properties, responsive grids, custom typography, and fluid micro-animations.</p>
                     </div>
-                    <div class="about-card glass-card">
+                    <div class="about-card glass-card clickable-card" data-url="https://github.com/abhishekyadav071" title="Click to view GitHub profile">
                         <div class="card-icon"><i class="fas fa-code-branch"></i></div>
                         <h3>Easy to Modify & Scale</h3>
                         <p>Clean modular codebase built for easy modification. Every Git commit triggers an automated live deployment.</p>
@@ -142,7 +143,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">A showcase of modern web solutions live on Vercel.</p>
+                    <p class="section-subtitle">Click any project card to open live demo or repository.</p>
                 </div>
                 <div class="project-filters">
                     <button class="filter-btn active" data-filter="all">All</button>
@@ -152,38 +153,40 @@
                 </div>
                 <div class="projects-grid" id="projects-grid">
                     <!-- Project 1 -->
-                    <div class="project-card glass-card" data-category="fullstack">
-                        <div class="project-badge">Live on Vercel</div>
+                    <div class="project-card glass-card clickable-card" data-category="fullstack" data-url="https://abhishekyadav071.github.io/My-Portfolio/">
+                        <div class="project-badge">Live Demo Available</div>
                         <div class="project-icon"><i class="fas fa-rocket"></i></div>
-                        <h3 class="project-title">Auto-Deploy Live Showcase</h3>
-                        <p class="project-desc">A high-performance modern web application automatically synchronized with GitHub repository commits for zero-downtime updates.</p>
+                        <h3 class="project-title">My Official Portfolio</h3>
+                        <p class="project-desc">A high-performance modern web application automatically synchronized with GitHub Pages for zero-downtime live updates.</p>
                         <div class="project-tags">
                             <span class="tag">HTML5</span>
                             <span class="tag">Vanilla CSS</span>
                             <span class="tag">JavaScript</span>
-                            <span class="tag">Vercel</span>
+                            <span class="tag">GitHub Pages</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/abhishekyadav071" target="_blank" class="project-link"><i class="fab fa-github"></i> Repository</a>
+                            <a href="https://abhishekyadav071.github.io/My-Portfolio/" target="_blank" class="project-link open-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/abhishekyadav071/My-Portfolio" target="_blank" class="project-link open-link-btn"><i class="fab fa-github"></i> Repository</a>
                         </div>
                     </div>
                     <!-- Project 2 -->
-                    <div class="project-card glass-card" data-category="frontend">
+                    <div class="project-card glass-card clickable-card" data-category="frontend" data-url="https://github.com/abhishekyadav071/My-Portfolio">
                         <div class="project-badge">Responsive UI</div>
                         <div class="project-icon"><i class="fas fa-layer-group"></i></div>
                         <h3 class="project-title">Glassmorphism UI Engine</h3>
-                        <p class="project-desc">Interactive design system utilizing CSS backdrop filters, custom color spaces, and modern CSS layout primitives.</p>
+                        <p class="project-desc">Interactive design system utilizing CSS backdrop filters, custom color spaces, dynamic lighting, and modern CSS layout primitives.</p>
                         <div class="project-tags">
                             <span class="tag">CSS Grid</span>
                             <span class="tag">Animations</span>
-                            <span class="tag">UI/UX</span>
+                            <span class="tag">Glassmorphism</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/abhishekyadav071" target="_blank" class="project-link"><i class="fab fa-github"></i> Repository</a>
+                            <a href="https://abhishekyadav071.github.io/My-Portfolio/" target="_blank" class="project-link open-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/abhishekyadav071/My-Portfolio" target="_blank" class="project-link open-link-btn"><i class="fab fa-github"></i> Repository</a>
                         </div>
                     </div>
                     <!-- Project 3 -->
-                    <div class="project-card glass-card" data-category="ai">
+                    <div class="project-card glass-card clickable-card" data-category="ai" data-url="https://github.com/abhishekyadav071">
                         <div class="project-badge">AI Powered</div>
                         <div class="project-icon"><i class="fas fa-robot"></i></div>
                         <h3 class="project-title">Agentic Workflow Studio</h3>
@@ -194,7 +197,24 @@
                             <span class="tag">Async Tasks</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/abhishekyadav071" target="_blank" class="project-link"><i class="fab fa-github"></i> Repository</a>
+                            <a href="https://github.com/abhishekyadav071" target="_blank" class="project-link open-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/abhishekyadav071" target="_blank" class="project-link open-link-btn"><i class="fab fa-github"></i> Repository</a>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="project-card glass-card clickable-card" data-category="fullstack" data-url="https://github.com/abhishekyadav071/live-web-app">
+                        <div class="project-badge">GitHub Project</div>
+                        <div class="project-icon"><i class="fas fa-globe"></i></div>
+                        <h3 class="project-title">Live Web App Showcase</h3>
+                        <p class="project-desc">Continuous deployment web application showcase repo connected with edge hosting pipelines.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/abhishekyadav071/live-web-app" target="_blank" class="project-link open-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/abhishekyadav071/live-web-app" target="_blank" class="project-link open-link-btn"><i class="fab fa-github"></i> Repository</a>
                         </div>
                     </div>
                 </div>

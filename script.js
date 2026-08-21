@@ -92,4 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1200);
         });
     }
+
+    // 5. Clickable Card Handler (opens project links on card click)
+    const clickableCards = document.querySelectorAll('.clickable-card');
+    clickableCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Avoid duplicate triggers if user clicked directly on an anchor or button inside the card
+            if (e.target.closest('a') || e.target.closest('button')) {
+                return;
+            }
+            const url = card.getAttribute('data-url');
+            if (url) {
+                window.open(url, '_blank', 'noopener,noreferrer');
+            }
+        });
+    });
 });

@@ -432,10 +432,28 @@ body {
     transition: var(--transition);
 }
 
+.clickable-card {
+    cursor: pointer;
+}
+
 .glass-card:hover {
     border-color: var(--border-glow);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(99, 102, 241, 0.2);
+}
+
+.glass-card:active {
+    transform: translateY(-2px) scale(0.99);
+}
+
+.click-hint {
+    font-size: 0.75rem;
+    color: var(--primary-glow);
+    background: rgba(99, 102, 241, 0.15);
+    padding: 2px 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    margin-left: auto;
 }
 
 /* About Grid */
